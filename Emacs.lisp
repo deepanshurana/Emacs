@@ -37,6 +37,9 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#2E3440" :foreground "#D8DEE9" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 170 :width normal :foundry "nil" :family "Courier")))))
 
+;; for font customization use <M-x customize-face RET default RET>
+
+
 
 ;;BASIC CUSTOMISATION_----------------------------------------------------
 
@@ -55,13 +58,14 @@
 (setq elpy-rpc-backend "jedi")
 
 (setq elpy-rpc-python-command " ~/../../anaconda3/bin/python")
-(setq python-shell-interpreter " ~/../../anaconda3/bin/python")
+(setq python-shell-interpreter " ~/../../anaconda3/bin/python")  ;; execution of python command and for generating virtualenv within buffer.
 ;; --------------------------<<NEOTREE>>----------------------------------
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-
+;; download all-the-icons package from MELPA; <M-x package-install RET all-the-icons RET>, and add
+;; the preceding text
 ;; -----------------------------------------------------------------------
 
 (require 'all-the-icons)
